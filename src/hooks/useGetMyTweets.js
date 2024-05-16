@@ -15,7 +15,7 @@ const useGetMyTweets = (id) => {
    try {
      const res = await axios.get(`${TWEET_END_POINT_API}/alltweets/${id}`, {
        withCredentials: true,
-     });
+     })
 
      console.log(res);
      dispatch(getAllTweets(res.data.tweets));
